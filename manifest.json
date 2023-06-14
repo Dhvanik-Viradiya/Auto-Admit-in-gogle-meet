@@ -1,0 +1,28 @@
+{
+    "name":"Auto admit",
+    "version":"1",
+    "description": "Automatically admit the people in the google meet",
+    "manifest_version": 2,
+    "permissions": [
+        "background",
+        "webNavigation",
+        "history",
+        "desktopCapture",
+        "storage",
+        "tabs",
+        "tabCapture",
+        "activeTab",
+        "identity",
+        "webRequest",
+        "webRequestBlocking",
+        "downloads",
+        "<all_urls>"
+      ],
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "js": ["content_script.js"]
+    }]
+}
